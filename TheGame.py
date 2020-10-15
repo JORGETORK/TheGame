@@ -6,6 +6,7 @@ import subprocess
 import sys 
 import time
 import requests
+from io import open
 
 Ahora = datetime.datetime.now()
 
@@ -87,7 +88,11 @@ print("""
 """)
 print(Ahora)
 
+Archivo = open("nombres_del_juego.txt","w")
+
 Nombre_del_jugador = input("ingresa tu nombre por favor: ")
+Archivo.write("Fecha: % s" %Ahora + "\n")
+Archivo.write("Nombre del jugador: " + Nombre_del_jugador + "\n")
 os.system ("clear")
 
 print(""" 
@@ -120,19 +125,26 @@ print("Introduccion")
 print("Vamos a empesar " + Nombre_del_jugador + " Esta es tu historia, todas las deciciones las tomas tú.")
 
 Nomre_del_pueblo = input("Ahora a personalisar tu historia primero dime de donde vienes para en futuras referencias saber de donde eres.\n ingresa el nombre de tu pueblo: ")
+Archivo.write("Nombre del pueblo: " + Nomre_del_pueblo + "\n")
 os.system ("clear")
 
 Nombre_del_malo = input("Bien ahora que sabemos que tu historia comensara en " + Nomre_del_pueblo + " tenemos que saber tambien el nombre del villano de la historia\n porque toda buena historia tiene un villano.\n ingresa el nombre del villano: ")
+Archivo.write("Nombre del malo: " + Nombre_del_malo + "\n")
 os.system ("clear")
 
 Nombre_del_padre = input("Ya casi esta solo fatan tu padre tu hermano y la doncella para comensar la historia.\n por favor ingresa el nombre de tu padre: ")
+Archivo.write("Nombre del padre: " + Nombre_del_padre + "\n")
 os.system ("clear")
 
 Nombre_del_hermano = input("Ahora ingresa el nombre de tu hermano: ")
+Archivo.write("Nombre del hermano: " + Nombre_del_hermano + "\n")
 os.system ("clear")
 
 Nombre_de_la_doncella = input("Ahora ingresa el nombre de la doncella: ")
+Archivo.write("Nombre de la doncella: " + Nombre_de_la_doncella)
 os.system ("clear")
+
+Archivo.close()
 
 input("Listo es hora de comenzar tu historia espero la disfrutes " + Nombre_del_jugador + " presiona enter cuando estes listo")
 os.system ("clear")
