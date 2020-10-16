@@ -10,6 +10,46 @@ from io import open
 
 Ahora = datetime.datetime.now()
 
+
+def camino_1_retorno():
+    print("muy bien " + Nombre_del_jugador + " has elejido ir por la izquierda")
+    camino_1 = int(input("Tu historia comensó hace ya 3 dias has caminado mucho y descansado muy poco pero te encontraste un hostal\n ¿quieres entrar?\n 1=si 2=no: "))
+    os.system ("clear")
+
+    if camino_1 == 1 :
+      print("muy bien " + Nombre_del_jugador + " que suerte te toco una cama muy comoda a dormir un poco")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Durmiendo")
+      print("[                    ] 0% ")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Durmiendo")
+      print("[=====               ] 25%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Durmiendo")
+      print("[==========          ] 50%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Durmiendo")
+      print("[===============     ] 75%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Durmiendo")
+      print("[===================] 100%")
+      time.sleep(2)
+      os.system ("clear")
+      print("Que increible descanso")
+
+    elif camino_1 == 2 :
+      print("que mal quien sabe cuando encontraras otro buen lugar para descansar")
+
 print("[VERSION]: 1.o\n\n")
 time.sleep(0.5)
 print("[juego creado por JORGETORK]\n\n")
@@ -141,7 +181,7 @@ Archivo.write("Nombre del hermano: " + Nombre_del_hermano + "\n")
 os.system ("clear")
 
 Nombre_de_la_doncella = input("Ahora ingresa el nombre de la doncella: ")
-Archivo.write("Nombre de la doncella: " + Nombre_de_la_doncella)
+Archivo.write("Nombre de la doncella: " + Nombre_de_la_doncella + "\n")
 os.system ("clear")
 
 Archivo.close()
@@ -155,44 +195,7 @@ primer_movimiento = int(input("Todo comenzó como un juego cuando eras pequeño 
 os.system ("clear")
 
 if primer_movimiento == 1 :
-  print("muy bien " + Nombre_del_jugador + " has elejido ir por la izquierda")
-  camino_1 = int(input("Tu historia comensó hace ya 3 dias has caminado mucho y descansado muy poco pero te encontraste un hostal\n ¿quieres entrar?\n 1=si 2=no: "))
-  os.system ("clear")
-
-  if camino_1 == 1 :
-    print("muy bien " + Nombre_del_jugador + " que suerte te toco una cama muy comoda a dormir un poco")
-    time.sleep(2)
-    os.system ("clear")
-    print(Ahora)
-    print("Durmiendo")
-    print("[                    ] 0% ")
-    time.sleep(2)
-    os.system ("clear")
-    print(Ahora)
-    print("Durmiendo")
-    print("[=====               ] 25%")
-    time.sleep(2)
-    os.system ("clear")
-    print(Ahora)
-    print("Durmiendo")
-    print("[==========          ] 50%")
-    time.sleep(2)
-    os.system ("clear")
-    print(Ahora)
-    print("Durmiendo")
-    print("[===============     ] 75%")
-    time.sleep(2)
-    os.system ("clear")
-    print(Ahora)
-    print("Durmiendo")
-    print("[===================] 100%")
-    time.sleep(2)
-    os.system ("clear")
-    print("Que increible descanso")
-
-
-  elif camino_1 == 2 :
-    print("que mal quien sabe cuando encontraras otro buen lugar para descansar")
+  camino_1_retorno()
 
 elif primer_movimiento == 2 :
   print("muy bien " + Nombre_del_jugador + " has elejido ir por la derecha")
@@ -200,7 +203,35 @@ elif primer_movimiento == 2 :
 
   if camino_2 == 1 :
     print("Muy bien " + Nombre_del_jugador + " regresemos al camino de la izquierda")
+    time.sleep(1)
     os.system ("clear")
+    print("REGRESANDO AL CAMINO DE LA IZQUIERDA")
+    print(Ahora)
+    print("[                    ] 0% ")
+    time.sleep(.5)
+    os.system ("clear")
+    print("REGRESANDO AL CAMINO DE LA IZQUIERDA")
+    print(Ahora)
+    print("[=====               ] 25%")
+    time.sleep(.5)
+    os.system ("clear")
+    print("REGRESANDO AL CAMINO DE LA IZQUIERDA")
+    print(Ahora)
+    print("[==========          ] 50%")
+    time.sleep(.5)
+    os.system ("clear")
+    print("REGRESANDO AL CAMINO DE LA IZQUIERDA")
+    print(Ahora)
+    print("[===============     ] 75%")
+    time.sleep(.5)
+    os.system ("clear")
+    print("REGRESANDO AL CAMINO DE LA IZQUIERDA")
+    print(Ahora)
+    print("[====================] 100%")
+    time.sleep(.5)
+    os.system ("clear")
+
+    camino_1_retorno()
     
   elif camino_2 == 2 :
     print("Deacuerdo seguiremos por este camino espero te queden fuersas porque a lo lejos se ve un pequeño pueblo")
