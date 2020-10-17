@@ -10,13 +10,51 @@ from io import open
 
 Ahora = datetime.datetime.now()
 
-
+#esta es la primera toma de decicion en el juego 
 def camino_1_retorno():
     print("muy bien " + Nombre_del_jugador + " has elejido ir por la izquierda")
     camino_1 = int(input("Tu historia comensó hace ya 3 dias has caminado mucho y descansado muy poco pero te encontraste un hostal\n ¿quieres entrar?\n 1=si 2=no: "))
     os.system ("clear")
 
     if camino_1 == 1 :
+      print(Ahora)
+      print("Entrando al hostal")
+      print("[                    ] 0% ")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Entrando al hostal")
+      print("[=====               ] 25%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Entrando al hostal")
+      print("[==========          ] 50%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Entrando al hostal")
+      print("[===============     ] 75%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Entrando al hostal")
+      print("[===================] 100%")
+      time.sleep(2)
+      os.system ("clear")
+      print("Bien ya estas dentro del hostal ¿que quieres hacer?\n")
+      acciones_del_hostal_1()
+      
+
+    elif camino_1 == 2 :
+      print("que mal quien sabe cuando encontraras otro buen lugar para descansar")
+
+#esta es la accion basica para los hostales dentro del juego
+def acciones_del_hostal_1():
+  Menu_de_opciones_del_hotal = int(input("Menu de opciones:\n 1)Dormir\n 2)Comer\n 3)Hacer una pregunta al dueño\n 4)salir\n Elije una opcion: "))
+  os.system ("clear")
+
+  if Menu_de_opciones_del_hotal == 1:
       print("muy bien " + Nombre_del_jugador + " que suerte te toco una cama muy comoda a dormir un poco")
       time.sleep(2)
       os.system ("clear")
@@ -46,16 +84,94 @@ def camino_1_retorno():
       time.sleep(2)
       os.system ("clear")
       print("Que increible descanso")
+      time.sleep(1)
+      os.system ("clear")
+      print("sigues dentro del hostal ¿que quieres hacer?\n")
+      acciones_del_hostal_1()
 
-    elif camino_1 == 2 :
-      print("que mal quien sabe cuando encontraras otro buen lugar para descansar")
 
-print("[VERSION]: 1.o\n\n")
+  elif Menu_de_opciones_del_hotal == 2:
+      print("Bien " + Nombre_del_jugador + " vamos a sentarnos a comer")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Comiendo")
+      print("[                    ] 0% ")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Comiendo")
+      print("[=====               ] 25%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Comiendo")
+      print("[==========          ] 50%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Comiendo")
+      print("[===============     ] 75%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Comiendo")
+      print("[===================] 100%")
+      time.sleep(2)
+      os.system ("clear")
+      print("Que deliciosa comida")
+      time.sleep(1)
+      os.system ("clear")
+      print("sigues dentro del hostal ¿que quieres hacer?\n")
+      acciones_del_hostal_1()
+
+  elif Menu_de_opciones_del_hotal == 3:
+      print("¿Que quieres preguntar?:\n")
+      preguntas_dueño_del_hostal1()
+
+  elif Menu_de_opciones_del_hotal == 4:
+      print(Ahora)
+      print("Saliendo del hostal")
+      print("[                    ] 0% ")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Saliendo del hostal")
+      print("[=====               ] 25%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Saliendo del hostal")
+      print("[==========          ] 50%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Saliendo del hostal")
+      print("[===============     ] 75%")
+      time.sleep(2)
+      os.system ("clear")
+      print(Ahora)
+      print("Saliendo del hostal")
+      print("[===================] 100%")
+      time.sleep(2)
+      os.system ("clear")
+      retomando_camino_1()
+
+#las preguntas a los dueños barian dependiendo el numero del hostal 
+def preguntas_dueño_del_hostal_1():
+  Menu_de_preguntas_hostal_1 = int(input("1)Preguntar sobre mi hermano\n 2)Preguntar sobre mi padre\n 3)Preguntar por un buen camino\n Elije una opcion: "))
+
+#Aqui se pondran los caminos a retomar al salir de los hostales hay una gran variedad de caminos a tomar
+def retomando_camino_1():
+  print("bien ya que descansaste un poco vamoa a retomar el camino")
+
+#aqui empiesa el codigo del juego que se muestra en pantalla
+print("[VERSION]: 1.0\n\n")
 time.sleep(0.5)
 print("[juego creado por JORGETORK]\n\n")
 time.sleep(0.5)
 print("Bienvenido a TheGame.(por favor pon tu terminal en pantalla completa Gracias)\n\n")
-time.sleep(2)
+time.sleep(3)
 os.system('clear')
 
 print("CARGANDO")
@@ -181,7 +297,7 @@ Archivo.write("Nombre del hermano: " + Nombre_del_hermano + "\n")
 os.system ("clear")
 
 Nombre_de_la_doncella = input("Ahora ingresa el nombre de la doncella: ")
-Archivo.write("Nombre de la doncella: " + Nombre_de_la_doncella + "\n")
+Archivo.write("Nombre de la doncella: " + Nombre_de_la_doncella + "\n\n")
 os.system ("clear")
 
 Archivo.close()
